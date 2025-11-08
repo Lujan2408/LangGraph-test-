@@ -5,6 +5,7 @@ def tool_node(state: dict):
   """Performs a tool call based on the LLM's decision"""
   
   result = []
+  
   for tool_call in state["messages"][-1].tool_calls: 
     tool = tools_by_name[tool_call["name"]]
     observation = tool.invoke(tool_call["args"])
@@ -15,6 +16,6 @@ def tool_node(state: dict):
       )
     )
     
-    return {
-      "messages": result
-    }
+  return {
+    "messages": result
+  }
