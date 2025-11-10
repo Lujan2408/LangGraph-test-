@@ -1,9 +1,7 @@
 """ Build workflow """
 from langgraph.graph import StateGraph, START, END
-from .state import MessagesState
-from .nodes.llm_node import llm_call
-from .nodes.tool_node import tool_node
-from .nodes.routing import should_continue
+from src.state import MessagesState
+from src.nodes import llm_call, tool_node, should_continue
 
 def create_agent(): 
   """Builds and compiles the agent workflow graph"""

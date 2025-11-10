@@ -1,7 +1,7 @@
 """ Define model node """
 from langchain.messages import SystemMessage
-from ..tools.match_tools import model_with_tools
-from ..state import MessagesState
+from src.tools import model_with_tools
+from src.state import MessagesState
 
 def llm_call(state: MessagesState): 
   """LLM decides whether to call a tool or not"""
