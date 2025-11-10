@@ -1,5 +1,5 @@
 from langchain.tools import tool
-from .models.llm import model
+from ..models.llm import model
 
 #Define tools 
 @tool 

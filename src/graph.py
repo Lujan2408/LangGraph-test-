@@ -1,6 +1,6 @@
 """ Define model node """
 from langchain.messages import SystemMessage
-from .tools import model_with_tools
+from .tools.match_tools import model_with_tools
 from .state import MessagesState
 
 def llm_call(state: MessagesState): 
