@@ -10,7 +10,7 @@ def main():
     display(Image(agent.get_graph(xray=True).draw_mermaid_png()))
 
     # Invoke the agent and add a human message
-    messages = [HumanMessage(content="Subtract 3 and 4.")]
+    messages = [HumanMessage(content="Divide 3 and 4.")]
     result = agent.invoke({"messages": messages}) # type: ignore
     for m in result["messages"]:
         m.pretty_print()
